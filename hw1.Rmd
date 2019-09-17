@@ -1,0 +1,50 @@
+---
+title: "create a single .Rmd file named p8105_hw1_jf3286.Rmd"
+author: "Jingyu Fu"
+date: "2019/9/17"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+
+prob1_df = tibble(
+  df_sample = rnorm(8),
+  vec_logical = df_sample > 0,
+  vec_char = c("today","is","monday","and","8","pm","in","hammer"),
+  vec_factor = c("1","1","2","2", "3","3","3","3")
+)
+
+mean(pull(prob1_df, df_sample))
+mean(pull(prob1_df, vec_logical))
+mean(pull(prob1_df, vec_char))
+mean(pull(prob1_df, vec_factor))
+
+```
+
+Taking the mean of df_sample and vec_logical work, but taking the mean of vec_char and vec_factor don't work. 
+
+```{r prob2, eval = FALSE}
+as.numeric(pull(prob1_df, df_sample))
+as.numeric(pull(prob1_df, vec_logical))
+as.numeric(pull(prob1_df, vec_char))
+as.numeric(pull(prob1_df, vec_factor))
+```
+
+vec_char doesn't work because it is not numeric! vec_factor is shown down as number becuase ......,...
+
+```{r prob2, eval = FALSE}
+as.numeric(pull(prob1_df, vec_logical))*pull(prob1_df, df_sample)
+as.factor(pull(prob1_df, vec_logical))*pull(prob1_df, df_sample)
+as.numeric(as.factor(pull(prob1_df, vec_logical)))*pull(prob1_df, df_sample)
+```
+
+logic: 0,1
+factor:1,2
+
+
+
