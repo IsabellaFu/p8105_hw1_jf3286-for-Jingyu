@@ -1,4 +1,4 @@
-create a single .Rmd file named p8105\_hw1\_jf3286.Rmd
+Homework 1
 ================
 Jingyu Fu
 2019/9/17
@@ -20,13 +20,13 @@ prob1_df = tibble(
 mean(pull(prob1_df, df_sample))
 ```
 
-    ## [1] 0.9280043
+    ## [1] 0.4111201
 
 ``` r
 mean(pull(prob1_df, vec_logical))
 ```
 
-    ## [1] 0.75
+    ## [1] 0.5
 
 ``` r
 mean(pull(prob1_df, vec_char))
@@ -99,11 +99,11 @@ prob2_df = tibble  (
 
 The size of the dataset is 500 rows and 5 columns.
 
-The mean of x is -0.0627943, the median of x is -0.074768, and the
-standrd deviation of x is 0.9932839.
+The mean of x is -0.0077571, the median of x is -0.0041857, and the
+standrd deviation of x is 0.9850241.
 
 The proportion of case for which x + y \> 1 is
-0.224.
+0.238.
 
 ## problem 2.3
 
